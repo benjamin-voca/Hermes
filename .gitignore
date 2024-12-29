@@ -1,6 +1,24 @@
 # Logs
 
-src-tauri/gen
+src-tauri/gen/android*.iml
+src-tauri/gen/android.gradle
+src-tauri/gen/android/local.properties
+src-tauri/gen/android/.idea/caches
+src-tauri/gen/android/.idea/libraries
+src-tauri/gen/android/.idea/modules.xml
+src-tauri/gen/android/.idea/workspace.xml
+src-tauri/gen/android/.idea/navEditor.xml
+src-tauri/gen/android/.idea/assetWizardSettings.xml
+src-tauri/gen/android.DS_Store
+src-tauri/gen/androidbuild
+src-tauri/gen/android/captures
+src-tauri/gen/android.externalNativeBuild
+src-tauri/gen/android.cxx
+src-tauri/gen/androidlocal.properties
+src-tauri/gen/androidkey.properties
+src-tauri/gen/android
+src-tauri/gen/android/.tauri
+src-tauri/gen/android/tauri.settings.gradle
 logs
 *.log
 npm-debug.log*
