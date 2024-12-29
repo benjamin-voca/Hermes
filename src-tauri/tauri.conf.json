@@ -7,7 +7,7 @@
     "frontendDist": "../dist",
     "beforeDevCommand": "pnpm serve",
     "devUrl": "http://localhost:8000",
-    "beforeBuildCommand": "pnpm bundle",
+    "beforeBuildCommand": "pnpm bundle"
   },
   "app": {
     "withGlobalTauri": true,

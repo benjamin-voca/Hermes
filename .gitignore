@@ -1,4 +1,6 @@
 # Logs
+
+src-tauri/gen
 logs
 *.log
 npm-debug.log*
