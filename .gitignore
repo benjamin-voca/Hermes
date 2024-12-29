@@ -7,12 +7,24 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+
+bower_components/
+node_modules/
+.pulp-cache/
+output/
+output-es/
+generated-docs/
+.psc-package/
+.psc*
+.purs*
+.psa*
+.spago
+
 node_modules
 dist
 dist-ssr
 *.local
 src-pure/output/
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

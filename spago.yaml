@@ -1,0 +1,54 @@
+package:
+  name: hermes
+  dependencies:
+
+    - aff
+    - affjax
+    - affjax-web
+    - argonaut-core
+    - arrays
+    - bifunctors
+    - codec
+    - codec-argonaut
+    - console
+    - const
+    - datetime
+    - dom-indexed
+    - effect
+    - either
+    - enums
+    - foldable-traversable
+    - formatters
+    - halogen
+    - halogen-formless
+    - halogen-store
+    - http-methods
+    - lists
+    - maybe
+    - newtype
+    - now
+    - ordered-collections
+    - parallel
+    - precise-datetime
+    - prelude
+    - profunctor
+    - profunctor-lenses
+    - remotedata
+    - routing
+    - routing-duplex
+    - safe-coerce
+    - strings
+    - transformers
+    - tuples
+    - typelevel-prelude
+    - web-events
+    - web-html
+    - web-storage
+    - web-uievents
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  packageSet:
+    registry: 62.2.0
+  extraPackages: {}

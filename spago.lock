@@ -5,22 +5,70 @@
         "path": "./",
         "core": {
           "dependencies": [
+            "aff",
+            "affjax",
+            "affjax-web",
+            "argonaut-core",
+            "arrays",
+            "bifunctors",
+            "codec",
+            "codec-argonaut",
             "console",
+            "const",
+            "datetime",
+            "dom-indexed",
             "effect",
+            "either",
+            "enums",
+            "foldable-traversable",
+            "formatters",
             "halogen",
-            "prelude"
+            "halogen-formless",
+            "halogen-store",
+            "http-methods",
+            "lists",
+            "maybe",
+            "newtype",
+            "now",
+            "ordered-collections",
+            "parallel",
+            "precise-datetime",
+            "prelude",
+            "profunctor",
+            "profunctor-lenses",
+            "remotedata",
+            "routing",
+            "routing-duplex",
+            "safe-coerce",
+            "strings",
+            "transformers",
+            "tuples",
+            "typelevel-prelude",
+            "web-events",
+            "web-html",
+            "web-storage",
+            "web-uievents"
           ],
           "build_plan": [
             "aff",
+            "affjax",
+            "affjax-web",
+            "argonaut-core",
+            "arraybuffer-types",
             "arrays",
+            "assert",
             "avar",
             "bifunctors",
             "catenable-lists",
+            "codec",
+            "codec-argonaut",
             "console",
             "const",
             "contravariant",
             "control",
+            "convertable-options",
             "datetime",
+            "decimals",
             "distributive",
             "dom-indexed",
             "effect",
@@ -28,24 +76,34 @@
             "enums",
             "exceptions",
             "exists",
+            "fixed-points",
             "foldable-traversable",
             "foreign",
             "foreign-object",
             "fork",
+            "form-urlencoded",
+            "formatters",
             "free",
             "freeap",
             "functions",
             "functors",
             "gen",
             "halogen",
+            "halogen-formless",
+            "halogen-hooks",
+            "halogen-store",
             "halogen-subscriptions",
             "halogen-vdom",
+            "heterogeneous",
+            "http-methods",
             "identity",
             "integers",
             "invariant",
             "js-date",
             "js-promise",
+            "js-uri",
             "lazy",
+            "lcg",
             "lists",
             "maybe",
             "media-types",
@@ -57,11 +115,21 @@
             "ordered-collections",
             "orders",
             "parallel",
+            "parsing",
             "partial",
+            "precise-datetime",
             "prelude",
             "profunctor",
+            "profunctor-lenses",
+            "quickcheck",
+            "random",
+            "record",
             "refs",
+            "remotedata",
+            "routing",
+            "routing-duplex",
             "safe-coerce",
+            "semirings",
             "st",
             "strings",
             "tailrec",
@@ -70,8 +138,11 @@
             "type-equality",
             "typelevel-prelude",
             "unfoldable",
+            "unicode",
             "unsafe-coerce",
             "unsafe-reference",
+            "validation",
+            "variant",
             "web-clipboard",
             "web-dom",
             "web-events",
@@ -80,7 +151,8 @@
             "web-pointerevents",
             "web-storage",
             "web-touchevents",
-            "web-uievents"
+            "web-uievents",
+            "web-xhr"
           ]
         },
         "test": {
@@ -637,6 +709,61 @@
         "unsafe-coerce"
       ]
     },
+    "affjax": {
+      "type": "registry",
+      "version": "13.0.0",
+      "integrity": "sha256-blYfaoW4FYIrIdvmT4sB7nN7BathFaEfZuiVLPmHJOo=",
+      "dependencies": [
+        "aff",
+        "argonaut-core",
+        "arraybuffer-types",
+        "foreign",
+        "form-urlencoded",
+        "http-methods",
+        "integers",
+        "media-types",
+        "nullable",
+        "refs",
+        "unsafe-coerce",
+        "web-xhr"
+      ]
+    },
+    "affjax-web": {
+      "type": "registry",
+      "version": "1.0.0",
+      "integrity": "sha256-n/yJUk1wMxMN7fJ2TJ+fELgieomy29N617yOshAnrc0=",
+      "dependencies": [
+        "aff",
+        "affjax",
+        "either",
+        "maybe",
+        "prelude"
+      ]
+    },
+    "argonaut-core": {
+      "type": "registry",
+      "version": "7.0.0",
+      "integrity": "sha256-RC82GfAjItydxrO24cdX373KHVZiLqybu19b5X8u7B4=",
+      "dependencies": [
+        "arrays",
+        "control",
+        "either",
+        "foreign-object",
+        "functions",
+        "gen",
+        "maybe",
+        "nonempty",
+        "prelude",
+        "strings",
+        "tailrec"
+      ]
+    },
+    "arraybuffer-types": {
+      "type": "registry",
+      "version": "3.0.2",
+      "integrity": "sha256-mQKokysYVkooS4uXbO+yovmV/s8b138Ws3zQvOwIHRA=",
+      "dependencies": []
+    },
     "arrays": {
       "type": "registry",
       "version": "7.3.0",
@@ -656,6 +783,16 @@
         "tuples",
         "unfoldable",
         "unsafe-coerce"
+      ]
+    },
+    "assert": {
+      "type": "registry",
+      "version": "6.0.0",
+      "integrity": "sha256-hCSYcCw9kj3qujoDcriWhCdmrpPZoguSPDZhEMnTl3A=",
+      "dependencies": [
+        "console",
+        "effect",
+        "prelude"
       ]
     },
     "avar": {
@@ -695,6 +832,28 @@
         "prelude",
         "tuples",
         "unfoldable"
+      ]
+    },
+    "codec": {
+      "type": "registry",
+      "version": "6.1.0",
+      "integrity": "sha256-6vMLNlsJxQarVQ9cn1FYfl5x6opfzxAza15SzRdxFxQ=",
+      "dependencies": [
+        "bifunctors",
+        "profunctor"
+      ]
+    },
+    "codec-argonaut": {
+      "type": "registry",
+      "version": "10.0.0",
+      "integrity": "sha256-n80U8KiBk333qfQwDobSZWiyNg9BA3CL/EwFznIdRwI=",
+      "dependencies": [
+        "argonaut-core",
+        "codec",
+        "foreign-object",
+        "ordered-collections",
+        "type-equality",
+        "variant"
       ]
     },
     "console": {
@@ -737,6 +896,17 @@
         "prelude"
       ]
     },
+    "convertable-options": {
+      "type": "registry",
+      "version": "1.0.0",
+      "integrity": "sha256-IFsYp0rXyzUtjoi3jed6yFYAVM+NhfgSn2j/zkjpccM=",
+      "dependencies": [
+        "console",
+        "effect",
+        "maybe",
+        "record"
+      ]
+    },
     "datetime": {
       "type": "registry",
       "version": "6.1.0",
@@ -758,6 +928,14 @@
         "partial",
         "prelude",
         "tuples"
+      ]
+    },
+    "decimals": {
+      "type": "registry",
+      "version": "7.1.0",
+      "integrity": "sha256-DriR6lPEfFpjVv7e4JAQkr3ZLf0h17Qg2cAIrhxWV7w=",
+      "dependencies": [
+        "maybe"
       ]
     },
     "distributive": {
@@ -839,6 +1017,17 @@
         "unsafe-coerce"
       ]
     },
+    "fixed-points": {
+      "type": "registry",
+      "version": "7.0.0",
+      "integrity": "sha256-hTl5fzeG4mzAOFzEzAeNH7kJvJgYCH7x3v2NdX9pOE4=",
+      "dependencies": [
+        "exists",
+        "newtype",
+        "prelude",
+        "transformers"
+      ]
+    },
     "foldable-traversable": {
       "type": "registry",
       "version": "6.0.0",
@@ -898,6 +1087,34 @@
       "integrity": "sha256-X7u0SuCvFbLbzuNEKLBNuWjmcroqMqit4xEzpQwAP7E=",
       "dependencies": [
         "aff"
+      ]
+    },
+    "form-urlencoded": {
+      "type": "registry",
+      "version": "7.0.0",
+      "integrity": "sha256-WUzk8DTjrbPVHKZ5w7XpPBO6ci6xFhvYguHp6RvX+18=",
+      "dependencies": [
+        "foldable-traversable",
+        "js-uri",
+        "maybe",
+        "newtype",
+        "prelude",
+        "strings",
+        "tuples"
+      ]
+    },
+    "formatters": {
+      "type": "registry",
+      "version": "7.0.0",
+      "integrity": "sha256-5JaC9d2p0xoqJWjWxlHH19R4iJwFTBr4j7SlYcLgicE=",
+      "dependencies": [
+        "datetime",
+        "fixed-points",
+        "lists",
+        "numbers",
+        "parsing",
+        "prelude",
+        "transformers"
       ]
     },
     "free": {
@@ -1006,6 +1223,83 @@
         "web-uievents"
       ]
     },
+    "halogen-formless": {
+      "type": "registry",
+      "version": "4.0.3",
+      "integrity": "sha256-HqNk/2CT01NPn1HVzAHCsnJ0K56tgtoBcVvKpRww5jo=",
+      "dependencies": [
+        "convertable-options",
+        "effect",
+        "either",
+        "foldable-traversable",
+        "foreign-object",
+        "halogen",
+        "heterogeneous",
+        "maybe",
+        "prelude",
+        "record",
+        "safe-coerce",
+        "type-equality",
+        "unsafe-coerce",
+        "unsafe-reference",
+        "variant",
+        "web-events",
+        "web-uievents"
+      ]
+    },
+    "halogen-hooks": {
+      "type": "registry",
+      "version": "0.6.3",
+      "integrity": "sha256-r3Win1phxy3TCxuS6Ws2lrkQxpPZ8U1CPWcgdXj9qq8=",
+      "dependencies": [
+        "aff",
+        "arrays",
+        "bifunctors",
+        "effect",
+        "exceptions",
+        "foldable-traversable",
+        "foreign-object",
+        "free",
+        "freeap",
+        "halogen",
+        "halogen-subscriptions",
+        "maybe",
+        "newtype",
+        "ordered-collections",
+        "parallel",
+        "partial",
+        "prelude",
+        "refs",
+        "tailrec",
+        "transformers",
+        "tuples",
+        "unsafe-coerce",
+        "unsafe-reference",
+        "web-dom",
+        "web-html"
+      ]
+    },
+    "halogen-store": {
+      "type": "registry",
+      "version": "0.5.4",
+      "integrity": "sha256-Mew74D5iJkh/tZ1JhCE4qKgv1Iv/nnhD3yMQphFTd4k=",
+      "dependencies": [
+        "aff",
+        "distributive",
+        "effect",
+        "fork",
+        "halogen",
+        "halogen-hooks",
+        "halogen-subscriptions",
+        "maybe",
+        "prelude",
+        "refs",
+        "tailrec",
+        "transformers",
+        "tuples",
+        "unsafe-reference"
+      ]
+    },
     "halogen-subscriptions": {
       "type": "registry",
       "version": "2.0.0",
@@ -1035,6 +1329,29 @@
         "tuples",
         "unsafe-coerce",
         "web-html"
+      ]
+    },
+    "heterogeneous": {
+      "type": "registry",
+      "version": "0.6.0",
+      "integrity": "sha256-cfNYSK6yYmjTrkzk95Otpv6TUUkeBreexwqG/tBvUyg=",
+      "dependencies": [
+        "either",
+        "functors",
+        "prelude",
+        "record",
+        "tuples",
+        "variant"
+      ]
+    },
+    "http-methods": {
+      "type": "registry",
+      "version": "6.0.0",
+      "integrity": "sha256-Orr7rbDGcp7qoqmUMXPRMjBx+C4jqOQcFe9+gE3nMgU=",
+      "dependencies": [
+        "either",
+        "prelude",
+        "strings"
       ]
     },
     "identity": {
@@ -1093,6 +1410,15 @@
         "prelude"
       ]
     },
+    "js-uri": {
+      "type": "registry",
+      "version": "3.1.0",
+      "integrity": "sha256-3p0ynHveCJmC2CXze+eMBdW/2l5e953Q8XMAKz+jxUo=",
+      "dependencies": [
+        "functions",
+        "maybe"
+      ]
+    },
     "lazy": {
       "type": "registry",
       "version": "6.0.0",
@@ -1102,6 +1428,19 @@
         "foldable-traversable",
         "invariant",
         "prelude"
+      ]
+    },
+    "lcg": {
+      "type": "registry",
+      "version": "4.0.0",
+      "integrity": "sha256-h7ME5cthLfbgJOJdsZcSfFpwXsx4rf8YmhebU+3iSYg=",
+      "dependencies": [
+        "effect",
+        "integers",
+        "maybe",
+        "partial",
+        "prelude",
+        "random"
       ]
     },
     "lists": {
@@ -1238,11 +1577,67 @@
         "transformers"
       ]
     },
+    "parsing": {
+      "type": "registry",
+      "version": "10.2.0",
+      "integrity": "sha256-ZDIdMFAKkst57x6BVa1aUWJnS8smoZnXsZ339Aq1mPA=",
+      "dependencies": [
+        "arrays",
+        "control",
+        "effect",
+        "either",
+        "enums",
+        "foldable-traversable",
+        "functions",
+        "identity",
+        "integers",
+        "lazy",
+        "lists",
+        "maybe",
+        "newtype",
+        "nullable",
+        "numbers",
+        "partial",
+        "prelude",
+        "st",
+        "strings",
+        "tailrec",
+        "transformers",
+        "tuples",
+        "unfoldable",
+        "unicode",
+        "unsafe-coerce"
+      ]
+    },
     "partial": {
       "type": "registry",
       "version": "4.0.0",
       "integrity": "sha256-fwXerld6Xw1VkReh8yeQsdtLVrjfGiVuC5bA1Wyo/J4=",
       "dependencies": []
+    },
+    "precise-datetime": {
+      "type": "registry",
+      "version": "7.0.0",
+      "integrity": "sha256-F7tzZ7++Ihtg3xjumzwaHQvGQg61UtEAe5MWeOlTzRY=",
+      "dependencies": [
+        "arrays",
+        "datetime",
+        "decimals",
+        "either",
+        "enums",
+        "foldable-traversable",
+        "formatters",
+        "integers",
+        "js-date",
+        "lists",
+        "maybe",
+        "newtype",
+        "numbers",
+        "prelude",
+        "strings",
+        "tuples",
+        "unicode"
+      ]
     },
     "prelude": {
       "type": "registry",
@@ -1265,6 +1660,86 @@
         "tuples"
       ]
     },
+    "profunctor-lenses": {
+      "type": "registry",
+      "version": "8.0.0",
+      "integrity": "sha256-K7f29rHRHgVSb2Y/PaSKtfYPriP6n87BJNO7EhsZHas=",
+      "dependencies": [
+        "arrays",
+        "bifunctors",
+        "const",
+        "control",
+        "distributive",
+        "either",
+        "foldable-traversable",
+        "foreign-object",
+        "functors",
+        "identity",
+        "lists",
+        "maybe",
+        "newtype",
+        "ordered-collections",
+        "partial",
+        "prelude",
+        "profunctor",
+        "record",
+        "transformers",
+        "tuples"
+      ]
+    },
+    "quickcheck": {
+      "type": "registry",
+      "version": "8.0.1",
+      "integrity": "sha256-ZvpccKQCvgslTXZCNmpYW4bUsFzhZd/kQUr2WmxFTGY=",
+      "dependencies": [
+        "arrays",
+        "console",
+        "control",
+        "effect",
+        "either",
+        "enums",
+        "exceptions",
+        "foldable-traversable",
+        "gen",
+        "identity",
+        "integers",
+        "lazy",
+        "lcg",
+        "lists",
+        "maybe",
+        "newtype",
+        "nonempty",
+        "numbers",
+        "partial",
+        "prelude",
+        "record",
+        "st",
+        "strings",
+        "tailrec",
+        "transformers",
+        "tuples",
+        "unfoldable"
+      ]
+    },
+    "random": {
+      "type": "registry",
+      "version": "6.0.0",
+      "integrity": "sha256-CJ611a35MPCE7XQMp0rdC6MCn76znlhisiCRgboAG+Q=",
+      "dependencies": [
+        "effect",
+        "integers"
+      ]
+    },
+    "record": {
+      "type": "registry",
+      "version": "4.0.0",
+      "integrity": "sha256-Za5U85bTRJEfGK5Sk4hM41oXy84YQI0I8TL3WUn1Qzg=",
+      "dependencies": [
+        "functions",
+        "prelude",
+        "unsafe-coerce"
+      ]
+    },
     "refs": {
       "type": "registry",
       "version": "6.0.0",
@@ -1274,12 +1749,86 @@
         "prelude"
       ]
     },
+    "remotedata": {
+      "type": "registry",
+      "version": "5.0.1",
+      "integrity": "sha256-walmE3/UPfXxuGjQTkL47ZOdp8yKoRY+lOAaAqYaMFQ=",
+      "dependencies": [
+        "bifunctors",
+        "effect",
+        "either",
+        "foldable-traversable",
+        "maybe",
+        "prelude",
+        "profunctor-lenses",
+        "transformers"
+      ]
+    },
+    "routing": {
+      "type": "registry",
+      "version": "11.0.0",
+      "integrity": "sha256-h2ZehllxQlfJDYh6Rlj0VySlJwqJvY4LMkb7p8cjxLs=",
+      "dependencies": [
+        "aff",
+        "console",
+        "control",
+        "effect",
+        "either",
+        "foldable-traversable",
+        "integers",
+        "js-uri",
+        "lists",
+        "maybe",
+        "numbers",
+        "partial",
+        "prelude",
+        "semirings",
+        "tuples",
+        "validation",
+        "web-html"
+      ]
+    },
+    "routing-duplex": {
+      "type": "registry",
+      "version": "0.7.0",
+      "integrity": "sha256-hgWzZPft6067zYvoZ1n0y/dSz4H2jBNREwfC3qC/s8Y=",
+      "dependencies": [
+        "arrays",
+        "assert",
+        "control",
+        "effect",
+        "either",
+        "foldable-traversable",
+        "integers",
+        "js-uri",
+        "lazy",
+        "maybe",
+        "newtype",
+        "prelude",
+        "profunctor",
+        "quickcheck",
+        "record",
+        "strings",
+        "tuples"
+      ]
+    },
     "safe-coerce": {
       "type": "registry",
       "version": "2.0.0",
       "integrity": "sha256-a1ibQkiUcbODbLE/WAq7Ttbbh9ex+x33VCQ7GngKudU=",
       "dependencies": [
         "unsafe-coerce"
+      ]
+    },
+    "semirings": {
+      "type": "registry",
+      "version": "7.0.0",
+      "integrity": "sha256-2qGNMxVYns7RJxZd1uGtJbGTeVl/6Ozsz9OM5gRM61A=",
+      "dependencies": [
+        "foldable-traversable",
+        "lists",
+        "newtype",
+        "prelude"
       ]
     },
     "st": {
@@ -1390,6 +1939,16 @@
         "tuples"
       ]
     },
+    "unicode": {
+      "type": "registry",
+      "version": "6.0.0",
+      "integrity": "sha256-QJnTVZpmihEAUiMeYrfkusVoziJWp2hJsgi9bMQLue8=",
+      "dependencies": [
+        "foldable-traversable",
+        "maybe",
+        "strings"
+      ]
+    },
     "unsafe-coerce": {
       "type": "registry",
       "version": "6.0.0",
@@ -1402,6 +1961,34 @@
       "integrity": "sha256-zU7BhfJU14nXQRZG9iADsp0mSiKhz07OcKyjRB2YT+Y=",
       "dependencies": [
         "prelude"
+      ]
+    },
+    "validation": {
+      "type": "registry",
+      "version": "6.0.0",
+      "integrity": "sha256-kfFailaIW4spGxbRk4261z/RGT0Sb7Dx5f3qihy0MTw=",
+      "dependencies": [
+        "bifunctors",
+        "control",
+        "either",
+        "foldable-traversable",
+        "newtype",
+        "prelude"
+      ]
+    },
+    "variant": {
+      "type": "registry",
+      "version": "8.0.0",
+      "integrity": "sha256-SR//zQDg2dnbB8ZHslcxieUkCeNlbMToapvmh9onTtw=",
+      "dependencies": [
+        "enums",
+        "lists",
+        "maybe",
+        "partial",
+        "prelude",
+        "record",
+        "tuples",
+        "unsafe-coerce"
       ]
     },
     "web-clipboard": {
@@ -1487,6 +2074,19 @@
       "version": "5.0.0",
       "integrity": "sha256-5I+ut9JYno3wowti3vJGs1afKCm1ucppKuy+zhuSyss=",
       "dependencies": [
+        "web-html"
+      ]
+    },
+    "web-xhr": {
+      "type": "registry",
+      "version": "5.0.1",
+      "integrity": "sha256-3dbIPVG66S+hPrgEVnpD78hrGjE7qlBbsReWOz89Ios=",
+      "dependencies": [
+        "arraybuffer-types",
+        "datetime",
+        "http-methods",
+        "web-dom",
+        "web-file",
         "web-html"
       ]
     }
