@@ -170,7 +170,7 @@ component = connect (selectEq _.currentUser) $ H.mkComponent
                       [ HH.div
                           [ css "sidebar" ]
                           [ HH.p_
-                              [ HH.text "Popular Tags" ]
+                              [ HH.text "Popular Tags @!#" ]
                           , renderTags tags
                           ]
                       ]

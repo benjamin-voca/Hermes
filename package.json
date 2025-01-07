@@ -9,6 +9,7 @@
     "clean": "rm -rf node_modules output .spago dist/*.js *.lock .cache",
     "build": "spago build",
     "test": "spago test",
+    "dev": "while true; do inotifywait -r -e modify,create,delete src && pnpm serve; done",
     "serve": "spago build && esbuild --bundle index.js --outfile=dist/index.js --servedir=dist",
     "bundle": "spago build --output output-es && purs-backend-es bundle-app --main Main --minify --no-build --to dist/index.js"
     },
