@@ -1,7 +1,6 @@
 package:
   name: hermes
   dependencies:
-
     - aff
     - affjax
     - affjax-web

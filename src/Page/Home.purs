@@ -17,6 +17,7 @@ import Conduit.Data.Article (ArticleWithMetadata)
 import Conduit.Data.PaginatedArray (PaginatedArray)
 import Conduit.Data.Profile (Profile)
 import Conduit.Data.Route (Route(..))
+-- import Conduit.Foreign.Tauri (greet)
 import Conduit.Store as Store
 import Data.Lens (Traversal')
 import Data.Lens.Index (ix)
@@ -170,7 +171,8 @@ component = connect (selectEq _.currentUser) $ H.mkComponent
                       [ HH.div
                           [ css "sidebar" ]
                           [ HH.p_
-                              [ HH.text "Popular Tags @!#" ]
+                              -- [ HH.text ("Popular Tags @!#" <> greet "BENI") ]
+                              [ HH.text ("Popular Tags @!#") ]
                           , renderTags tags
                           ]
                       ]

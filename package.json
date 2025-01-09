@@ -12,11 +12,13 @@
     "dev": "while true; do inotifywait -r -e modify,create,delete src && pnpm serve; done",
     "serve": "spago build && esbuild --bundle index.js --outfile=dist/index.js --servedir=dist",
     "bundle": "spago build --output output-es && purs-backend-es bundle-app --main Main --minify --no-build --to dist/index.js"
-    },
+  },
   "devDependencies": {
     "@tauri-apps/cli": "^2"
   },
   "dependencies": {
+    "@tauri-apps/api": "^2.2.0",
+    "@tauri-apps/plugin-shell": "^2",
     "decimal.js": "^10.3.1",
     "marked": "^4.0.15"
   }
