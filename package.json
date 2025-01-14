@@ -9,12 +9,14 @@
     "clean": "rm -rf node_modules output .spago dist/*.js *.lock .cache",
     "build": "spago build",
     "test": "spago test",
-    "dev": "while true; do inotifywait -r -e modify,create,delete src && pnpm serve; done",
     "serve": "spago build && esbuild --bundle index.js --outfile=dist/index.js --servedir=dist",
-    "bundle": "spago build --output output-es && purs-backend-es bundle-app --main Main --minify --no-build --to dist/index.js"
-  },
+    "bundle": "spago build --output output-es && purs-backend-es bundle-app --main Main --minify --no-build --to dist/index.js",
+    "watch": "nodemon -e purs,js --watch src --exec \"npm run bundle\""
+    },
   "devDependencies": {
-    "@tauri-apps/cli": "^2"
+    "@tauri-apps/cli": "^2",
+    "nodemon": "^3.1.9",
+    "vite": "^6.0.7"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.2.0",

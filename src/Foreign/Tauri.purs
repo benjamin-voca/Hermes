@@ -1,30 +1,35 @@
 module Conduit.Foreign.Tauri where
 
-import Prelude
+import Control.Promise (Promise, toAffE)
+import Effect (Effect)
+import Effect.Aff (Aff)
 
-import Data.Either (Either(..))
-import Effect.Aff (error)
-import Effect.Aff.Compat (EffectFnAff)
-import Effect.Exception (throw)
-import Foreign (Foreign)
-import Foreign (readInt)
-import Foreign.Object (Object)
-import Foreign.Object as FO
+-- foreign import data Response :: Type
+{-foreign import invoke_
+:: forall a
+ . String
+-> Foreign
+-> EffectFnAff a-}
+foreign import invoke_ :: forall r o a. String -> { | r } -> { | o } -> Effect (Promise a)
 
--- | Invoke a Tauri command with the given name and arguments.
-foreign import invokeTauriCommand
-  :: String
-  -> FO.Object Foreign
-  -> EffectFnAff Foreign
+invokeAff :: forall r o a. String -> { | r } -> { | o } -> Aff a
+invokeAff cmd args opts = toAffE (invoke_ cmd args opts)
 
--- | Decodes a Foreign value to an Int, throwing an error if it fails.
-unsafeDecodeInt :: Foreign -> Int
-unsafeDecodeInt value = case readInt value of
-  Right n -> n
-  Left err -> throw $ error $ "Expected Int, got: " <> show err
+-- invoke :: String -> Object Foreign -> Aff Foreign
+-- invoke cmd args = toAffE $ invoke_ cmd args
 
--- | Returns an Int from the "add2" Tauri command.
-add2 :: EffectFnAff Int
-add2 = do
-  result <- invokeTauriCommand "add2" FO.empty
-  pure $ unsafeDecodeInt result
+-- invoke_
+{-
+invoke
+  :: forall a
+   . String
+  -> Object.Object Foreign
+  -> Object.Object Foreign
+  -> Aff a
+invoke cmd args options = do
+  liftEffect $ do
+    promise <- invoke_ cmd (unsafeCoerce args) (unsafeCoerce options)
+    unsafeCoerce promise
+-}
+greet :: String -> Aff String
+greet name = invokeAff "greet" { name: name } {}

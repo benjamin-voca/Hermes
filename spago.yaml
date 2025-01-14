@@ -2,6 +2,7 @@ package:
   name: hermes
   dependencies:
     - aff
+    - aff-promise
     - affjax
     - affjax-web
     - argonaut-core
@@ -17,6 +18,7 @@ package:
     - either
     - enums
     - foldable-traversable
+    - foreign
     - formatters
     - halogen
     - halogen-formless
